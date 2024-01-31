@@ -56,22 +56,32 @@
             display: none;
         }
 
-        #ResearchContent {
+        #AboutMeContent {
             display: block;
         }
     </style>
 </head>
 <body>
     <div class="tabs">
+        <div class="tab" onclick="showContent('AboutMeContent')">About Me</div>
         <div class="tab" onclick="showContent('ResearchContent')">Research</div>
-        <div class="tab" onclick="showContent('EducationContent')">Education/Experiences</div>
+        <div class="tab" onclick="showContent('AwardsContent')">Awards</div>
     </div>
 
-    <div id="ResearchContent" class="content">
+    <div id="AboutMeContent" class="content">
         <h1>Myeonghun Lee</h1>
         <!-- Add your photo here -->
         <img src="images/mh_photo.jpg" alt="My Photo" style="width: 150px; height: 150px; border-radius: 50%;">
 
+        <!-- About Me Section -->
+        <h2>About Me</h2>
+        <p>I'm a passionate researcher in the field of revenue management, exploring innovative solutions for...</p>
+
+        <!-- Add other sections as needed -->
+
+    </div>
+
+    <div id="ResearchContent" class="content">
         <!-- Research Section -->
         <h2>Research Interests</h2>
         <p>Online Platforms, Assortment Planning, Revenue Management, Sustainable Management</p>
@@ -80,16 +90,11 @@
 
     </div>
 
-    <div id="EducationContent" class="content">
-        <!-- Education and Experiences Section -->
-        <h2>Education</h2>
+    <div id="AwardsContent" class="content">
+        <!-- Awards Section -->
+        <h2>Awards</h2>
         <ul>
-            <!-- Add your education details here -->
-        </ul>
-
-        <h2>Experience</h2>
-        <ul>
-            <!-- Add your experience details here -->
+            <!-- Add your awards details here -->
         </ul>
 
         <!-- Add other sections as needed -->
