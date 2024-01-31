@@ -34,33 +34,76 @@
         a {
             color: #4CAF50;
         }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+
+        .tab:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            display: none;
+        }
+
+        #ResearchContent {
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <h1>Myeonghun Lee</h1>
-    
-    <p>College of Business, KAIST</p>
-    <p>Hoegi-ro 85 Dongdaemun-gu, Seoul, Korea 02455</p>
-    <p>Phone: +82-10-9089-8601</p>
-    <p>Email: <a href="mailto:mhlee96@kaist.ac.kr">mhlee96@kaist.ac.kr</a></p>
+    <div class="tabs">
+        <div class="tab" onclick="showContent('ResearchContent')">Research</div>
+        <div class="tab" onclick="showContent('EducationContent')">Education/Experiences</div>
+    </div>
 
-    <h2>Summary</h2>
-    <p>I am a Ph.D. Candidate in Management Engineering at KAIST, specializing in Operations Management. My research focuses on Online Platforms, Assortment Planning, Revenue Management, and Sustainable Management.</p>
+    <div id="ResearchContent" class="content">
+        <h1>Myeonghun Lee</h1>
+        <!-- Add your photo here -->
+        <img src="file:///C:/Users/Myeonghun%20Lee/Downloads/mh_photo.jpg" alt="My Photo" style="width: 150px; height: 150px; border-radius: 50%;">
 
-    <h2>Education</h2>
-    <ul>
-        <li><strong>Korea Advanced Institute of Science and Technology (KAIST)</strong></li>
+        <!-- Research Section -->
+        <h2>Research Interests</h2>
+        <p>Online Platforms, Assortment Planning, Revenue Management, Sustainable Management</p>
+
+        <!-- Working Papers, Working-in-Progress, Presentations, Awards sections, etc. -->
+
+    </div>
+
+    <div id="EducationContent" class="content">
+        <!-- Education and Experiences Section -->
+        <h2>Education</h2>
         <ul>
-            <li>Ph.D. Candidate, Management Engineering (M.S./Ph.D. integrated), 2019 - present</li>
-            <li>M.S., Management Engineering, 2018 - 2019</li>
+            <!-- Add your education details here -->
         </ul>
-        <li><strong>Pohang University of Science and Technology (POSTECH)</strong></li>
+
+        <h2>Experience</h2>
         <ul>
-            <li>B.S., Industrial Management Engineering, 2014 - 2018</li>
+            <!-- Add your experience details here -->
         </ul>
-    </ul>
 
-    <!-- Add more sections following the same structure -->
+        <!-- Add other sections as needed -->
 
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            const contents = document.getElementsByClassName('content');
+            for (const content of contents) {
+                content.style.display = 'none';
+            }
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
